@@ -329,12 +329,44 @@
             font-size: 0.9rem;
         }
 
+        /* Image Styles */
+        .proof-image {
+            max-width: 700px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(107, 33, 168, 0.2);
+            margin: 30px auto;
+            display: block;
+        }
+
+        .image-section {
+            padding: 40px 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .image-section h2 {
+            font-size: 2rem;
+            color: #6b21a8;
+            margin-bottom: 20px;
+        }
+
+        .image-section p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 { font-size: 1.8rem; }
             .hero p { font-size: 1.1rem; }
             .step { width: 100%; }
             .stat { width: 100%; max-width: 250px; }
+            .proof-image { max-width: 95%; }
         }
     </style>
 </head>
@@ -397,6 +429,13 @@
         </div>
     </section>
 
+    <!-- Funnel Stats Image -->
+    <section class="image-section" style="background: #f8f9fa;">
+        <h2>🎯 Our Success Story!</h2>
+        <p>20,000+ leads generated for local businesses across Delhi NCR!</p>
+        <img src="images/funnel-stats.png" alt="Revenue Share Partner - 20K+ Leads Success Story" class="proof-image">
+    </section>
+
     <!-- Results Section -->
     <section class="results">
         <h2>🏆 Real Results That Speak!</h2>
@@ -418,6 +457,13 @@
                 <p>Avg. Cost Per Lead</p>
             </div>
         </div>
+    </section>
+
+    <!-- Meta Ad Results Image -->
+    <section class="image-section">
+        <h2>📈 Don't Just Take Our Word For It!</h2>
+        <p>Here's a real screenshot from our Meta Ads dashboard - these are actual numbers!</p>
+        <img src="images/meta-results.png" alt="Meta Ad Results - Real campaign performance data" class="proof-image">
     </section>
 
     <!-- Pricing Section -->
@@ -443,6 +489,13 @@
                 <span>None!</span>
             </div>
         </div>
+    </section>
+
+    <!-- Pricing Breakdown Image -->
+    <section class="image-section">
+        <h2>📊 See The Math Yourself!</h2>
+        <p>Here's exactly how your money works - step by step!</p>
+        <img src="images/pricing-breakdown.png" alt="Pricing Breakdown - How your ₹30,000 becomes 75+ leads" class="proof-image">
     </section>
 
     <!-- Testimonial -->
