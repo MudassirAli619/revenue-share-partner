@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Share Partner - We Bring Customers to Your Business</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #6b21a8 0%, #9333ea 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+
+        .hero .emoji-big {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Simple Explanation */
+        .explain {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .explain h2 {
+            font-size: 2rem;
+            color: #6b21a8;
+            margin-bottom: 40px;
+        }
+
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            border-radius: 20px;
+            padding: 30px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(107, 33, 168, 0.1);
+        }
+
+        .step-number {
+            background: #6b21a8;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            color: #6b21a8;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        /* Funnel Section */
+        .funnel-section {
+            background: linear-gradient(180deg, #f3e8ff 0%, #fff 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .funnel-section h2 {
+            font-size: 2rem;
+            color: #6b21a8;
+            margin-bottom: 20px;
+        }
+
+        .funnel-section > p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .funnel {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .funnel-step {
+            background: linear-gradient(135deg, #9333ea 0%, #6b21a8 100%);
+            color: white;
+            padding: 25px 20px;
+            margin: 0 auto 8px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .funnel-step:nth-child(1) { width: 100%; }
+        .funnel-step:nth-child(2) { width: 85%; }
+        .funnel-step:nth-child(3) { width: 70%; }
+        .funnel-step:nth-child(4) { width: 55%; }
+        .funnel-step:nth-child(5) { width: 40%; }
+
+        .funnel-step .number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Results Section */
+        .results {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .results h2 {
+            font-size: 2rem;
+            color: #6b21a8;
+            margin-bottom: 40px;
+        }
+
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat {
+            background: linear-gradient(135deg, #6b21a8 0%, #9333ea 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 200px;
+            box-shadow: 0 4px 15px rgba(107, 33, 168, 0.3);
+        }
+
+        .stat .big-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .stat p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .pricing h2 {
+            font-size: 2rem;
+            color: #6b21a8;
+            margin-bottom: 20px;
+        }
+
+        .pricing > p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pricing-box {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(107, 33, 168, 0.15);
+        }
+
+        .pricing-box h3 {
+            font-size: 1.5rem;
+            color: #6b21a8;
+            margin-bottom: 20px;
+        }
+
+        .pricing-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 1.1rem;
+        }
+
+        .pricing-item:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-item span:first-child {
+            color: #555;
+        }
+
+        .pricing-item span:last-child {
+            font-weight: bold;
+            color: #6b21a8;
+        }
+
+        /* Testimonial */
+        .testimonial {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .testimonial h2 {
+            font-size: 2rem;
+            color: #6b21a8;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-box {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            border-radius: 20px;
+            padding: 40px 30px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .testimonial-box p {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-box .author {
+            font-weight: bold;
+            color: #6b21a8;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, #6b21a8 0%, #9333ea 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #6b21a8;
+            padding: 18px 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1f1f1f;
+            color: #aaa;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1.1rem; }
+            .step { width: 100%; }
+            .stat { width: 100%; max-width: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <span class="emoji-big">🚀</span>
+        <h1>We Bring Customers to Your Business!</h1>
+        <p>You focus on your work. We focus on getting you more customers. Simple as that!</p>
+    </section>
+
+    <!-- How It Works -->
+    <section class="explain">
+        <h2>🤔 How Does This Work? (Super Simple!)</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>You Tell Us About Your Business</h3>
+                <p>You share what you sell and who your customers are. Like telling a friend!</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>We Make Cool Ads</h3>
+                <p>We create fun ads on Facebook & Instagram that make people say "Wow, I need that!"</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Customers Come to You!</h3>
+                <p>People who see our ads contact you directly. More calls, more visits, more sales!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funnel Section -->
+    <section class="funnel-section">
+        <h2>📊 Your Money Turns Into Customers!</h2>
+        <p>Think of it like a magic funnel - we put your money in, and customers come out!</p>
+        <div class="funnel">
+            <div class="funnel-step">
+                <span class="number">₹30,000</span>
+                Your Monthly Ad Budget
+            </div>
+            <div class="funnel-step">
+                <span class="number">₹1,000</span>
+                Daily Spending on Ads
+            </div>
+            <div class="funnel-step">
+                <span class="number">₹400</span>
+                Cost Per Customer Lead
+            </div>
+            <div class="funnel-step">
+                <span class="number">2-3 Leads</span>
+                New Customers Every Day
+            </div>
+            <div class="funnel-step">
+                <span class="number">75+ Leads</span>
+                New Customers Every Month!
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results">
+        <h2>🏆 Real Results That Speak!</h2>
+        <div class="stats">
+            <div class="stat">
+                <span class="big-number">20,000+</span>
+                <p>Leads Generated</p>
+            </div>
+            <div class="stat">
+                <span class="big-number">27 Million</span>
+                <p>People Reached</p>
+            </div>
+            <div class="stat">
+                <span class="big-number">₹45 Lakhs</span>
+                <p>Ad Spend Managed</p>
+            </div>
+            <div class="stat">
+                <span class="big-number">₹200</span>
+                <p>Avg. Cost Per Lead</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <h2>💰 What Does It Cost?</h2>
+        <p>We only succeed when you succeed! That's why it's called "Revenue Share" - we share the success together!</p>
+        <div class="pricing-box">
+            <h3>Simple Pricing</h3>
+            <div class="pricing-item">
+                <span>Ad Budget (You Pay Directly)</span>
+                <span>₹30,000/month</span>
+            </div>
+            <div class="pricing-item">
+                <span>Our Service Fee</span>
+                <span>Revenue Share</span>
+            </div>
+            <div class="pricing-item">
+                <span>Setup Fee</span>
+                <span>FREE!</span>
+            </div>
+            <div class="pricing-item">
+                <span>Contract Lock-in</span>
+                <span>None!</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial">
+        <h2>💬 What Business Owners Say</h2>
+        <div class="testimonial-box">
+            <p>"I was getting maybe 5 customers a week. Now I get 5 customers a DAY! They really know how to bring people to my shop."</p>
+            <div class="author">- Happy Business Owner, Delhi NCR</div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>📞 Ready to Get More Customers?</h2>
+        <p>Let's chat! It's FREE to talk. Tell us about your business, and we'll show you how we can help!</p>
+        <a href="https://wa.me/919999999999?text=Hi!%20I%20want%20more%20customers%20for%20my%20business" class="cta-button">
+            💬 Chat on WhatsApp
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Revenue Share Partner | Performance Marketing for Local Business</p>
+        <p style="margin-top: 10px;">Helping Local Businesses Grow Since 2025</p>
+    </footer>
+
+</body>
+</html>
